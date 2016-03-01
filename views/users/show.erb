@@ -1,0 +1,17 @@
+<h1>Specific User Page</h1>
+
+<%= "#{@user[:fname].capitalize} #{@user[:lname].capitalize}" %>
+<br />Email:<%= "#{@user[:email]}" %>
+
+<form action="/users/<%= @user[:id] %>" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete User">
+</form>
+<a href="/users/<%= @user[:id] %>/edit">Go to Edit Page</a>
+
+<br />
+<a href="/users">Back to Main Page</a>
+<!-- when you want to link back to a page always use anchor tag -->
+
+<!-- form has only two methods which are post and get so we want to delete; so we create a code to use delete, override to be able to use delete -->
+

@@ -1,0 +1,17 @@
+<!-- first -->
+<h1>Hello</h1>          
+
+<!-- after creating the display specific user -->
+<% @users.each do |x| %> 
+  <li>
+  <!-- <a href="/users/:id">        doesnt work so put it sa ruby code due to params-->
+  <a  href="/users/<%= x[:id] %>">
+    <%= "#{x[:fname].capitalize} #{x[:lname].capitalize}" %>
+  </a> 
+  </li>
+
+<% end %>
+
+<hr />
+<!-- after creating homepage -->
+<a href="/users/new"> Add New User </a>
