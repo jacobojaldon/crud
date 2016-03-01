@@ -39,9 +39,9 @@ post '/users' do
 end
 
 patch '/users/:id' do
-  @users = @users.where(id: params[:id])
+  @user = @users.where(id: params[:id])
   # @users.insert(fname: params[:fname], lname: params[:lname], email: params[:email]) dont use insert
-  @users.update(fname: params[:fname], lname: params[:lname], email: params[:email])
+  @user.update(fname: params[:fname], lname: params[:lname], email: params[:email])
   redirect '/users'
 end
 
@@ -49,7 +49,7 @@ delete '/users/:id' do
   # you find in the @users table where the :id key is equivalent to params [:id] and the assign to a variable
   # x = @users.where(id: params[:id])             alternative way
   # x.delete
-  @users = @users.where(id: params[:id]).delete 
+  @user = @users.where(id: params[:id]).delete 
   redirect '/users'
 end
 
