@@ -7,5 +7,7 @@ DB.create_table :users do
   primary_key :id
   String :fname
   String :lname
-  String :email  
+  String :email 
+  String :username
+  String :password 
 end
