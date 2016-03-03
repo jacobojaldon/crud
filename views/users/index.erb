@@ -2,16 +2,21 @@
 <h1>Hello</h1>          
 
 <!-- after creating the display specific user -->
-<% @users.each do |x| %> 
+<% @users.each do |user| %> 
   <li>
   <!-- <a href="/users/:id">        doesnt work so put it sa ruby code due to params-->
-  <a  href="/users/<%= x[:id] %>">
-    <%= "#{x[:fname].capitalize} #{x[:lname].capitalize}" %>
+  <a  href="/users/<%= user[:id] %>">
+    <%= "#{user[:fname]} #{user[:lname]}" %>
   </a> 
   </li>
 
 <% end %>
 
+
+
 <hr />
 <!-- after creating homepage -->
 <a href="/users/new"> Add New User </a>
+
+<!-- <br />
+<a href="/users/signin">Sign In</a> -->
